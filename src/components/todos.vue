@@ -8,8 +8,8 @@
     />
     <ul>
       <li v-for="(todo, index) in todos" :key="index">
-        {{ todo }}
-        <button @click="removeTodo(index)">Remove</button>
+        {{ todo.text }}
+        <button @click="removeTodo(todo.id)">Remove</button>
       </li>
     </ul>
   </div>
@@ -19,20 +19,25 @@
 export default {
   data() {
     return {
+      id: 2,
       newTodo: "",
-      todos: [],
+      todos: [
+        { id: 1, text: "initial todo" },
+        { id: 2, text: "initial todo" },
+      ],
     };
   },
   methods: {
     addTodo() {
       if (this.newTodo.trim() !== "") {
-        this.todos.push(this.newTodo);
+        this.todos.push({ id: ++this.id, text: this.newTodo });
         this.newTodo = "";
       }
     },
     removeTodo(index) {
-      this.todos.splice(index, 1);
+      this.todos = this.todos.filter((todo) => todo.id !== index);
     },
+    checkDone(index) {},
   },
 };
 </script>

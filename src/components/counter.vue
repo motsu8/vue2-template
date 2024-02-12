@@ -1,9 +1,11 @@
 <template>
-  <div>
+  <div class="container">
     <h2>Counter App</h2>
     <p>{{ count }}</p>
-    <button @click="increment">Increment</button>
-    <button @click="decrement">Decrement</button>
+    <div class="btn-container">
+      <button @click="increment">Increment</button>
+      <button @click="decrement">Decrement</button>
+    </div>
   </div>
 </template>
 
@@ -27,4 +29,16 @@ export default {
 
 <style scoped>
 /* スタイルが必要な場合はここに追加 */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-around;
+  width: 10%;
+}
 </style>

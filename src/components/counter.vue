@@ -29,16 +29,4 @@ export default {
 
 <style scoped>
 /* スタイルが必要な場合はここに追加 */
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.btn-container {
-  display: flex;
-  justify-content: space-around;
-  width: 10%;
-}
 </style>

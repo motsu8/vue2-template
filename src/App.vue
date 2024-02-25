@@ -2,17 +2,20 @@
   <div id="app">
     <Counter />
     <Todo />
+    <Calculation />
   </div>
 </template>
 
 <script>
-import Counter from './components/counter.vue';
-import Todo from './components/todos.vue';
+import Counter from './components/Counter.vue';
+import Todo from './components/Todos.vue';
+import Calculation from './components/Calculation.vue';
 
 export default {
   components: {
     Counter,
-    Todo
+    Todo,
+    Calculation
   }
 };
 </script>

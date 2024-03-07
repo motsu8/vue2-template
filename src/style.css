@@ -35,6 +35,10 @@ h1 {
   line-height: 1.1;
 }
 
+.hidden {
+  display: none !important;
+}
+
 #app {
   max-width: 1280px;
   margin: 0 auto;
@@ -84,7 +88,6 @@ h1 {
   display: flex;
   justify-content: space-around;
 }
-
 
 button {
   border-radius: 8px;
